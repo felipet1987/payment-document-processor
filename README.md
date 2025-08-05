@@ -1,5 +1,9 @@
 # Payment Document Processor
 
+Aplicación web Vaadin para procesar documentos de pago en formato JSON, generar reportes HTML y realizar conversiones automáticas. Incluye utilidades para decodificación, mapeo, y validación de documentos, con arquitectura modular y pruebas automáticas.
+
+---
+
 Este documento explica, paso a paso y desde cero, cómo instalar y probar la aplicación desarrollada. No se asume ningún software previamente instalado en el computador. Siga cada sección en orden.
 
 ---
@@ -47,13 +51,13 @@ No es necesario instalar Maven manualmente, ya que el proyecto incluye Maven Wra
 1. Abra una terminal o consola.
 2. Descargue el repositorio usando git (si tiene git instalado):
    ```sh
-   git clone <URL_DEL_REPOSITORIO>
-   cd vaadin-processor
+   git clone https://github.com/felipet1987/payment-document-processor.git
+   cd payment-document-processor
    ```
    Si no tiene git, puede descargar el proyecto como archivo ZIP desde la página del repositorio y descomprimirlo.
 
 ## 5. Compilar y ejecutar la aplicación
-1. En la terminal, dentro de la carpeta del proyecto (`vaadin-processor`), ejecute:
+1. En la terminal, dentro de la carpeta del proyecto (`payment-document-processor`), ejecute:
    ```sh
    ./mvnw clean package
    ./mvnw spring-boot:run
@@ -96,21 +100,34 @@ Esto compilará y ejecutará todos los tests del proyecto. Debe mostrar que toda
 
 ## 8. Estructura del proyecto
 ```
-vaadin-processor/
-├── src/main/java/cl/felipe/processor/...
-├── src/test/java/cl/felipe/processor/...
+payment-document-processor/
+├── src/
+│   ├── main/
+│   │   └── java/cl/felipe/processor/
+│   │       ├── dto/
+│   │       ├── service/
+│   │       ├── util/
+│   │       └── view/
+│   └── test/
+│       └── java/cl/felipe/processor/
+│           ├── util/
+│           └── (otros tests)
 ├── pom.xml
 ├── README.md
 ├── mvnw / mvnw.cmd
+├── .gitignore
 ```
+
 
 ## 9. Problemas frecuentes
 - **Puerto 8080 ocupado:** Cierre cualquier otro programa que use ese puerto.
 - **Permisos denegados:** Ejecute la terminal como administrador o use `sudo` en Linux/macOS.
 - **No reconoce `./mvnw`:** Use `mvnw.cmd` en Windows.
 
-## 10. Contacto
-Para dudas o problemas, contactar al desarrollador o revisar el código fuente.
+
+
+
+> **Nota:** Los archivos XML generados por la aplicación se guardan automáticamente en la carpeta `output/` (esta carpeta está ignorada por git).
 
 ---
 
