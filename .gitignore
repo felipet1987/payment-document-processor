@@ -35,3 +35,6 @@ build/
 
 # macOS Finder
 .DS_Store
+
+# Output folder
+output/
