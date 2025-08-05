@@ -106,11 +106,11 @@ payment-document-processor/
 │   │   └── java/cl/felipe/processor/
 │   │       ├── dto/
 │   │       ├── service/
-│   │       ├── util/
+│   │       ├── adapter/
 │   │       └── view/
 │   └── test/
 │       └── java/cl/felipe/processor/
-│           ├── util/
+│           ├── adapter/
 │           └── (otros tests)
 ├── pom.xml
 ├── README.md
